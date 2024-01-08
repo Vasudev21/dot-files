@@ -1,3 +1,16 @@
+" __     __                  _            _     
+" \ \   / /_ _ ___ _   _  __| | _____   _( )___ 
+"  \ \ / / _` / __| | | |/ _` |/ _ \ \ / /// __|
+"   \ V / (_| \__ \ |_| | (_| |  __/\ V /  \__ \
+"    \_/ \__,_|___/\__,_|\__,_|\___| \_/   |___/
+"                                               
+"  _   _         __     ___              ____             __ _       
+" | \ | | ___  __\ \   / (_)_ __ ___    / ___|___  _ __  / _(_) __ _ 
+" |  \| |/ _ \/ _ \ \ / /| | '_ ` _ \  | |   / _ \| '_ \| |_| |/ _` |
+" | |\  |  __/ (_) \ V / | | | | | | | | |__| (_) | | | |  _| | (_| |
+" |_| \_|\___|\___/ \_/  |_|_| |_| |_|  \____\___/|_| |_|_| |_|\__, |
+"                                                              |___/ 
+
 set showmatch 	" show matching
 set mouse=v	" middle-click paste with 
 set hlsearch	" highlight search
@@ -14,18 +27,28 @@ set clipboard=unnamedplus	" using system clipboard
 filetype plugin on
 set cursorline	" highlight current cursorline
 " set cc=80
+
+" Install the below to use vim plugins 
+" curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+"  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 call plug#begin("~/.vim/plugged")
     " Plugin Section
     Plug 'dracula/vim'
     Plug 'ryanoasis/vim-devicons'
-    Plug 'scrooloose/nerdtree'
+    Plug 'preservim/nerdtree'
     Plug 'preservim/nerdcommenter'
     Plug 'elvessousa/sobrio'
     Plug 'vim-airline/vim-airline'
 call plug#end()
+
+" To install plugins type :PlugInstall
+
 nmap <F6> :NERDTreeToggle<CR>
-set t_Co=256
 let NERDTreeShowHidden=1
+
+set t_Co=256  " Set terminal to true color works with iTerm2
+
+" Code to get a better status bar below
 let g:airline_theme='sobrio'
 let g:airline_powerline_fonts=1
 let g:airline#extentions#tabline#enabled=1
