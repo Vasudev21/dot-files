@@ -11,6 +11,9 @@
 " |_| \_|\___|\___/ \_/  |_|_| |_| |_|  \____\___/|_| |_|_| |_|\__, |
 "                                                              |___/ 
 
+" Before starting $ touch ~/.vimrc to create .vimrc where contents of this file can be saved
+" Install Plug and update it
+
 set showmatch 	" show matching
 set mouse=v	" middle-click paste with 
 set hlsearch	" highlight search
@@ -32,6 +35,7 @@ set cursorline	" highlight current cursorline
 " curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 "  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 call plug#begin("~/.vim/plugged")
+" For more information: https://github.com/junegunn/vim-plug
     " Plugin Section
     Plug 'dracula/vim'
     Plug 'ryanoasis/vim-devicons'
